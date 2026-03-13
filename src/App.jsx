@@ -1,7 +1,7 @@
 import { useState } from 'react'
-import reactLogo from './assets/react.svg'
-import viteLogo from '/vite.svg'
-import './App.css'
+import reactLogo from './assets/img/react.svg'
+import './assets/css/common.css'
+import './assets/css/layout.css'
 
 function App() {
   const [count, setCount] = useState(0)
@@ -10,22 +10,7 @@ function App() {
         <>
             <div className="container">
 
-            <h1>CSS 코드 리뷰</h1>
-
-            <textarea
-                placeholder="CSS 코드를 입력하세요"
-                value={cssCode}
-                onChange={(e) => setCssCode(e.target.value)}
-            />
-
-            <button onClick={handleAnalyze}>
-                코드 분석
-            </button>
-
-            <div className="result">
-                <h2>분석 결과</h2>
-                <pre>{result}</pre>
-            </div>
+                <h1>드라마 챗봇 만들기</h1>
 
             </div>
         </>

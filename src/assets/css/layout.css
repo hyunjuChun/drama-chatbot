@@ -1,0 +1,10 @@
+/* font */
+
+@font-face {
+    font-family: 'Pretendard';
+	src: url('../font/PretendardVariable.woff2') format('woff2-variations'),
+         url('../font/PretendardVariable.ttf') format('truetype');
+    font-style: normal;
+    font-weight: 100 900;
+    font-display: swap;
+}
