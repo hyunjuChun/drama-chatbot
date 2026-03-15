@@ -1,20 +1,16 @@
-import { useState } from 'react'
-import reactLogo from './assets/img/react.svg'
-import './assets/css/common.css'
-import './assets/css/layout.css'
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import CharacterSelect from "./pages/CharacterSelect.jsx";
+import Chat from "./pages/Chat.jsx";
 
 function App() {
-  const [count, setCount] = useState(0)
-
     return (
-        <>
-            <div className="container">
-
-                <h1>드라마 챗봇 만들기</h1>
-
-            </div>
-        </>
-    )
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<CharacterSelect />} />
+                <Route path="/chat/:id" element={<Chat />} />
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
-export default App
+export default App;

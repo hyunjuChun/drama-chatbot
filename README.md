@@ -7,19 +7,24 @@
 3. 만든게 정상 작동하는지 확인
 
 src
- ├ assets
- │  └ css
- │     ├ common.css
- │     └ layout.css
+ ├ pages
+ │   ├ CharacterSelect.jsx   (캐릭터 선택 화면)
+ │   └ Chat.jsx              (대화 화면)
  │
+ ├ components
+ │   ├ CharacterCard.jsx
+ │   ├ ChatMessage.jsx
+ │   ├ ChatInput.jsx
  │
- ├ font
- │   ├ PretendardVariable.ttf
- │   └ PretendardVariable.woff2
+ ├ data
+ │   └ Characters.js
  │
+ ├ api
+ │   └ ChatApi.js
  │
- ├ img
- │   └ react.svg
+ └ assets
+     ├ css
+     └ images
  │
  │
  ├ App.jsx
