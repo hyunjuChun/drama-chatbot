@@ -5,11 +5,16 @@ import Chat from "./pages/Chat.jsx";
 function App() {
     return (
         <BrowserRouter>
+
+            <h1>#DRAMA-CHATBOT</h1>
+
             <Routes>
                 <Route path="/" element={<CharacterSelect />} />
                 <Route path="/chat/:id" element={<Chat />} />
             </Routes>
+
         </BrowserRouter>
+
     );
 }
 

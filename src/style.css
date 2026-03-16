@@ -1,0 +1,27 @@
+@charset "utf-8";
+
+h1 { font-size: 1.5em; padding: 16px 0; }
+
+.content { display: block; padding: 24px; background: rgba(18, 18, 18, .06); border-radius: 1em; border: 1px solid rgba(18, 18, 18, .2); height: 720px; }
+.chat-content { display: flex; flex-direction: column; }
+
+.btn-wrap { display: flex; margin-top: 72px; gap: 8px 12px; }
+button { padding: 18px 24px; background: rgba(18, 18, 18, .12); border-radius: 8px; border: 1px solid rgba(18, 18, 18, .4); }
+.btn-prev { position: absolute; right: 0; top: 12px; padding: 12px 20px; background: rgba(18, 18, 18, .12); border-radius: 8px; border: 1px solid rgba(18, 18, 18, .4); }
+.btn-send { padding: 12px 16px; }
+
+.chat-wrap { flex: 1; padding-right: 16px; overflow-y: scroll; }
+.chat { display: flex; flex-direction: column; gap: 12px; align-items: flex-start; }
+.chat.user { align-items: flex-end; }
+.chat .txt { max-width: 640px; padding: 16px 24px; background: rgba(18, 18, 18, 0.12);  border-radius: 8px; border: 1px solid rgba(18, 18, 18, .2); }
+.chat + .chat { margin-top: 20px; }
+
+.chat-wrap::-webkit-scrollbar { width: 8px; scroll-behavior: smooth; }
+.chat-wrap::-webkit-scrollbar-thumb { background-color: rgba(18, 18, 18, .2); border-radius: 24px; }
+.chat-wrap::-webkit-scrollbar-track { background-color: transparent; }
+
+.input-wrap { display: flex; width: 100%; gap: 12px; margin-top: 24px; }
+input { border: 0; padding: 12px 16px; flex: 1; background: rgba(18, 18, 18, 0.06); border-radius: 12px; }
+input:focus { outline: none; border: none; }
+
+.title { display: block; text-align: center; font-size: 20px; padding-bottom: 28px; border-bottom: 1px solid rgba(18, 18, 18, .7); margin-bottom: 24px; }

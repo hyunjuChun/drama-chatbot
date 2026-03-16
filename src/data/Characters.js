@@ -1,12 +1,11 @@
-export const characters = [
+
+export const chts = [
     {
-        id: "sunja",
-        name: "선자",
-        image: "/images/sunja.png"
+        id: "take1",
+        name: "주인공 1",
     },
     {
-        id: "hansoo",
-        name: "한수",
-        image: "/images/hansoo.png"
+        id: "take2",
+        name: "주인공 2",
     }
 ];

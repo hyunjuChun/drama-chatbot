@@ -11,14 +11,14 @@ function ChatInput({ onSend }) {
     };
 
     return (
-        <div>
+        <div className="input-wrap">
 
             <input
                 value={text}
                 onChange={(e) => setText(e.target.value)}
                 placeholder="메시지 입력"
             />
-            <button onClick={handleSend}>전송</button>
+            <button className="btn btn-send" onClick={handleSend}>전송</button>
 
         </div>
     );

@@ -1,7 +1,11 @@
-function ChatMessage({ role, text }) {
+
+function ChatMessage({role,text,className}){
     return (
-        <div>
-            <strong>{role}:</strong> {text}
+        <div className={`chat ${className}`}>
+            <span>{role}</span>
+            <div className="txt">
+                {text}
+            </div>
         </div>
     );
 }

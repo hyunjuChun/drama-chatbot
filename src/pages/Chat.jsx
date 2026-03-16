@@ -1,29 +1,63 @@
-import { useParams } from "react-router-dom";
-import { useState } from "react";
+import { useParams, useNavigate } from "react-router-dom";
+import { useState, useRef, useEffect } from "react";
 import ChatMessage from "../components/ChatMessage";
 import ChatInput from "../components/ChatInput";
+import { chts } from "../data/Characters";
+import { sendChatMessage } from "../api/ChatApi";
 
 function Chat() {
 
-    const { id } = useParams();
+    const {id} = useParams();
+    const navigate = useNavigate();
+    const cht = chts.find((c) => c.id === id);
 
     const [messages, setMessages] = useState([]);
+    const chatEndRef = useRef(null);
 
-    const sendMessage = (text) => {
-        setMessages([...messages, { role: "user", text }]);
+    useEffect(() => {
+        chatEndRef.current?.scrollIntoView({ behavior: "smooth" });
+    }, [messages]);
+
+    const sendMessage = async (text) => {
+
+        setMessages((prev) => [...prev, { role: "사용자", text, className: "user" }]);
+        const reply = await sendChatMessage(text, id);
+
+        setMessages((prev) => [
+            ...prev,
+            { role: "bot", text: reply, className: "bot" }
+        ]);
+    };
+
+    const goBack = () => {
+        navigate("/");
     };
 
     return (
-        <div>
-            <h1>{id} 와 대화</h1>
 
-            <div>
-                {messages.map((msg, i) => (
-                <ChatMessage key={i} role={msg.role} text={msg.text} />
-                ))}
+        <div className="wrap">
+            <button className="btn-prev" onClick={goBack}>뒤로가기</button>
+
+            <div className="content chat-content">
+
+                <p className="title">{cht?.name}</p>
+                <div className="chat-wrap">
+                    {messages.map((msg, i) => (
+                        <ChatMessage
+                            key={i}
+                            role={msg.role}
+                            text={msg.text}
+                            name={cht?.name}
+                            className={msg.className}
+                        />
+                    ))}
+
+                    <div ref={chatEndRef} aria-hidden></div>
+                </div>
+
+                <ChatInput onSend={sendMessage} />
+
             </div>
-
-            <ChatInput onSend={sendMessage} />
         </div>
     );
 }
