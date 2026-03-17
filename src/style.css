@@ -13,7 +13,7 @@ button { padding: 18px 24px; background: rgba(18, 18, 18, .12); border-radius: 8
 .chat-wrap { flex: 1; padding-right: 12px; overflow-y: scroll; }
 .chat { display: flex; flex-direction: column; gap: 6px; align-items: flex-start; }
 .chat.user { align-items: flex-end; }
-.chat .txt { max-width: 640px; padding: 16px 24px; background: rgba(18, 18, 18, 0.12);  border-radius: 8px; border: 1px solid rgba(18, 18, 18, .2); }
+.chat .txt { max-width: 640px; padding: 12px 24px; background: rgba(18, 18, 18, 0.12);  border-radius: 999em; border: 1px solid rgba(18, 18, 18, .2); }
 .chat + .chat { margin-top: 16px; }
 
 .chat-wrap::-webkit-scrollbar { width: 8px; scroll-behavior: smooth; }
@@ -21,7 +21,7 @@ button { padding: 18px 24px; background: rgba(18, 18, 18, .12); border-radius: 8
 .chat-wrap::-webkit-scrollbar-track { background-color: transparent; }
 
 .input-wrap { display: flex; width: 100%; gap: 12px; margin-top: 24px; }
-input { border: 0; padding: 12px 16px; flex: 1; background: rgba(18, 18, 18, 0.06); border-radius: 12px; }
+input { border: 0; padding: 12px 16px; flex: 1; background: rgba(18, 18, 18, 0.06); border-radius: 12px; font-size: 16px; }
 input:focus { outline: none; border: none; }
 
 .title { display: block; text-align: center; font-size: 20px; padding-bottom: 28px; border-bottom: 1px solid rgba(18, 18, 18, .7); margin-bottom: 24px; }

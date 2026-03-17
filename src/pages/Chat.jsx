@@ -19,13 +19,12 @@ function Chat() {
     }, [messages]);
 
     const sendMessage = async (text) => {
-
         setMessages((prev) => [...prev, { role: "사용자", text, className: "user" }]);
-        const reply = await sendChatMessage(text, id);
+        const reply = await sendChatMessage(text, cht.name, cht.description);
 
         setMessages((prev) => [
             ...prev,
-            { role: "bot", text: reply, className: "bot" }
+            { role: cht.name, text: reply, className: "bot" }
         ]);
     };
 

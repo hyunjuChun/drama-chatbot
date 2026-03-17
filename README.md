@@ -12,6 +12,16 @@
 - 이후 대화창
 - 대화창에서 대화를 하다가 뒤로가기를 누르면 대화는 모두 초기화됨, 대화 기억 기능 x
 
+
+server
+ │
+ ├ node_modules
+ ├ model-test.js
+ ├ package-lock.json
+ ├ package.json
+ └ server.js
+
+
 src
  ├ pages
  │   ├ CharacterSelect.jsx   (캐릭터 선택 화면)
@@ -36,39 +46,3 @@ src
  ├ App.jsx
  ├ index.css
  └ main.jsx
-
-
-# 데이터 흐름
-
-CharacterSelect
-   ↓
-캐릭터 선택
-   ↓
-Chat (useParams로 캐릭터 id 받음)
-   ↓
-ChatInput → 메시지 입력
-   ↓
-messages state 저장
-   ↓
-ChatMessage로 화면 출력
-   ↓
-ChatApi → AI 응답
-
-
-# 실제 동작 구조
-
-characters.js
-   ↓
-CharacterSelect.jsx
-   ↓
-CharacterCard 클릭
-   ↓
-/chat/:id 이동
-   ↓
-Chat.jsx
-   ↓
-ChatInput 입력
-   ↓
-messages state
-   ↓
-ChatMessage 출력
