@@ -20,12 +20,13 @@ app.use(express.static(distPath));
 
 app.post("/api/chat", async (req, res) => {
     const { message, characterName, characterDesc } = req.body;
+    console.log("API 키 확인:", API_KEY ? API_KEY.substring(0, 5) + "****" : "키 없음!");
 
     try {
         const model = genAI.getGenerativeModel({ 
             model: "gemini-1.5-flash",
             systemInstruction: `너는 드라마 캐릭터 '${characterName}'야. 아래 설정에 따라 연기해.
-                    
+
             [핵심 규칙]
             1. 반드시 1~2문장 내외로 아주 짧게 대답하기
             2. 대사 위주로 말하고, 괄호 안의 행동 묘사는 하지않기
