@@ -17,9 +17,10 @@ server
  │
  ├ node_modules
  ├ model-test.js
+ ├ test-gemini.js  - render에서 실행시키?려는것
+ ├ test-llm.js  - 회사거, 베포 x
  ├ package-lock.json
- ├ package.json
- └ server.js
+ └ package.json
 
 
 src
