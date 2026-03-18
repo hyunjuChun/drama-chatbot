@@ -2,10 +2,10 @@
   "name": "server",
   "version": "1.0.0",
   "description": "Drama Chatbot Server",
-  "main": "test-gemini.js",
+  "main": "test-llm.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "node test-gemini.js"
+    "start": "node test-llm.js"
   },
   "keywords": [],
   "author": "",
