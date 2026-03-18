@@ -3,7 +3,7 @@ import { useState, useRef, useEffect } from "react";
 import ChatMessage from "../components/ChatMessage";
 import ChatInput from "../components/ChatInput";
 import { chts } from "../data/Characters";
-import { sendChatMessage } from "../api/ChatApi";
+import { sendChatMessage } from "../api/ChatApi.js";
 
 function Chat() {
 
